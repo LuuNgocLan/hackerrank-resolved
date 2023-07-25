@@ -1,3 +1,5 @@
+# Balanced Brackets 
+
 A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
 
 Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or {) occurs to the left of a closing bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [], {}, and ().
@@ -10,40 +12,92 @@ It contains no unmatched brackets.
 The subset of brackets enclosed within the confines of a matched pair of brackets is also a matched pair of brackets.
 Given  strings of brackets, determine whether each sequence of brackets is balanced. If a string is balanced, return YES. Otherwise, return NO.
 
-Function Description
+### Function Description
 
 Complete the function isBalanced in the editor below.
 
 isBalanced has the following parameter(s):
 
 string s: a string of brackets
-Returns
+
+#### Returns
 
 string: either YES or NO
-Input Format
+
+#### Input Format
 
 The first line contains a single integer , the number of strings.
 Each of the next  lines contains a single string , a sequence of brackets.
 
-Constraints
+#### Constraints
 
-, where  is the length of the sequence.
+- <img width="129" alt="Screenshot 2023-07-25 at 08 59 00" src="https://github.com/LuuNgocLan/hackerrank-resolved/assets/29207172/b1e793a5-66e0-415b-99f0-262b4ebdf094">
+
+- <img width="119" alt="Screenshot 2023-07-25 at 08 59 32" src="https://github.com/LuuNgocLan/hackerrank-resolved/assets/29207172/70e8d31d-d7e3-4073-a7c5-a920359c3d8a">, where |s| is the length of the sequence.
+
 All chracters in the sequences ∈ { {, }, (, ), [, ] }.
-Output Format
+
+#### Output Format
 
 For each string, return YES or NO.
 
-Sample Input
+### Sample Input
 
+```jsx
 STDIN Function ----- -------- 3 n = 3 {[()]} first s = '{[()]}' {[(])} second s = '{[(])}' {{[[(())]]}} third s ='{{[[(())]]}}'
+```
 
-Sample Output
+### Sample Output
 
+```
 YES
 NO
 YES
-Explanation
+```
+
+### Explanation
 
 The string {[()]} meets both criteria for being a balanced string.
 The string {[(])} is not balanced because the brackets enclosed by the matched pair { and } are not balanced: [(]).
 The string {{[[(())]]}} meets both criteria for being a balanced string.
+
+## Solution
+
+![image](https://github.com/LuuNgocLan/hackerrank-resolved/assets/29207172/0dc357b6-b25e-4d24-b07e-187c2fd05e71)
+
+## Testcase1
+
+#### Input
+```kotlin
+3
+{[()]}
+{[(])}
+{{[[(())]]}}
+```
+
+#### Expected
+
+```kotlin
+YES
+NO
+YES
+```
+
+## Testcase2
+
+#### Input
+```kotlin
+3
+{(([])[])[]}
+{(([])[])[]]}
+{(([])[])[]}[]
+```
+
+#### Expected
+
+```kotlin
+YES
+NO
+YES
+```
+
